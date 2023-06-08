@@ -1,7 +1,20 @@
 #!/bin/bash
 
+# Check if node is already installed
+echo "Validating Node installation..."
+if [ -x "$(command -v node)" ]; then
+    node_version=$(node --version)
+    echo "Node is already installed with the version: $node_version"
+
+else
+    echo "Starting Node installation..."
+    # Install Node
+    curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\
+    sudo apt-get install -y nodejs
+fi
+
 # Check if Docker is already installed
-echo "Checking Docker installation..."
+echo "Validating Docker installation..."
 if [ -x "$(command -v docker)" ]; then
     docker_version=$(docker --version | awk '{print $3}')
     echo "Docker is already installed with the version: $docker_version"
@@ -27,7 +40,7 @@ else
     echo "Docker installed successfully with the version: $docker_installed_version"
 fi
 
-echo "Checking Docker Compose installation..."
+echo "Validating Docker Compose installation..."
 # Check if Docker Compose is already installed
 if [ -x "$(command -v docker-compose)" ]; then
     docker_compose_version=$(docker-compose version --short)
@@ -41,5 +54,21 @@ else
     sudo chmod +x /usr/local/bin/docker-compose
 
     echo "Docker Compose version $(docker-compose version --short) installed successfully."
+fi
+
+# Check if registry is already installed
+echo "Validating Registry installation..."
+if [ -x "$(command -v registry)" ]; then
+    registry_version=$(registry version)
+    echo "Registry is already installed with the version: $registry_version"
+    echo "Please continue using Registry"
+
+else
+    echo "Starting Registry installation..."
+    # Install Registry
+    npm install --global registry-cli
+    registry help
+    echo "Registry installed successfully"
+
 fi
 
