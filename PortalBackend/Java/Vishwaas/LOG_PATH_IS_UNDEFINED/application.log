@@ -1,0 +1,59 @@
+2023-06-05 00:28:07.166 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 182436 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:28:07.166 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:28:07.418 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:28:07.419 [INFO] Starting service [Tomcat]
+2023-06-05 00:28:07.420 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:28:07.429 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:28:07.429 [INFO] Root WebApplicationContext: initialization completed in 260 ms
+2023-06-05 00:28:07.531 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:28:07.541 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:28:07.545 [INFO] Started VishwaasApplication in 0.472 seconds (process running for 257.949)
+2023-06-05 00:28:07.547 [INFO] Condition evaluation unchanged
+2023-06-05 00:29:23.060 [INFO] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-05 00:29:23.067 [INFO] Stopping service [Tomcat]
+2023-06-05 00:33:20.905 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 182436 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:33:20.908 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:33:20.920 [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [Vishwaas.VishwaasApplication]
+2023-06-05 00:33:20.926 [ERROR] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [Vishwaas.VishwaasApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:415)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at Vishwaas.VishwaasApplication.main(VishwaasApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'certificate' for bean class [Vishwaas.copy.Certificate] conflicts with existing, non-compatible bean definition of same name and class [Vishwaas.Certificate]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:289)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 18 common frames omitted
+2023-06-05 00:34:29.515 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 182436 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:34:29.515 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:34:29.685 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:34:29.685 [INFO] Starting service [Tomcat]
+2023-06-05 00:34:29.685 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:34:29.693 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:34:29.694 [INFO] Root WebApplicationContext: initialization completed in 177 ms
+2023-06-05 00:34:29.766 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:34:29.775 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:34:29.778 [INFO] Started VishwaasApplication in 0.295 seconds (process running for 640.183)
+2023-06-05 00:34:29.781 [INFO] Condition evaluation unchanged
+2023-06-05 00:34:42.182 [INFO] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-05 00:34:42.183 [INFO] Stopping service [Tomcat]

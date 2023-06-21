@@ -1,0 +1,124 @@
+[2023-06-05 00:11:23.479] [INFO] Token retrieved successfully.
+[2023-06-05 00:11:23.490] [INFO] Token retrieved successfully.
+[2023-06-05 00:11:23.516] [INFO] Token retrieved successfully.
+2023-06-05 00:16:01.639 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 174239 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:16:01.639 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:16:01.892 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:16:01.893 [INFO] Starting service [Tomcat]
+2023-06-05 00:16:01.893 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:16:01.903 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:16:01.904 [INFO] Root WebApplicationContext: initialization completed in 262 ms
+2023-06-05 00:16:02.003 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:16:02.013 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:16:02.017 [INFO] Started VishwaasApplication in 0.461 seconds (process running for 286.659)
+2023-06-05 00:16:02.019 [INFO] Condition evaluation unchanged
+2023-06-05 00:16:25.438 [INFO] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-06-05 00:16:25.443 [INFO] Stopping service [Tomcat]
+2023-06-05 00:16:25.600 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 174239 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:16:25.601 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:16:25.882 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:16:25.883 [INFO] Starting service [Tomcat]
+2023-06-05 00:16:25.884 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:16:25.902 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:16:25.904 [INFO] Root WebApplicationContext: initialization completed in 301 ms
+2023-06-05 00:16:25.998 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:16:26.004 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:16:26.008 [INFO] Started VishwaasApplication in 0.491 seconds (process running for 310.65)
+2023-06-05 00:16:26.009 [INFO] Condition evaluation unchanged
+2023-06-05 00:16:43.440 [INFO] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-06-05 00:16:43.446 [INFO] Stopping service [Tomcat]
+2023-06-05 00:16:43.512 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 174239 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:16:43.512 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:16:43.654 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:16:43.655 [INFO] Starting service [Tomcat]
+2023-06-05 00:16:43.655 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:16:43.662 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:16:43.662 [INFO] Root WebApplicationContext: initialization completed in 148 ms
+2023-06-05 00:16:43.728 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:16:43.738 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:16:43.740 [INFO] Started VishwaasApplication in 0.244 seconds (process running for 328.382)
+2023-06-05 00:16:43.741 [INFO] Condition evaluation unchanged
+2023-06-05 00:17:07.166 [INFO] Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-06-05 00:17:07.169 [INFO] Stopping service [Tomcat]
+2023-06-05 00:17:09.167 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 174239 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:17:09.168 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:17:09.411 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:17:09.412 [INFO] Starting service [Tomcat]
+2023-06-05 00:17:09.412 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:17:09.425 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:17:09.425 [INFO] Root WebApplicationContext: initialization completed in 254 ms
+2023-06-05 00:17:09.488 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:17:09.499 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:17:09.502 [INFO] Started VishwaasApplication in 0.392 seconds (process running for 354.144)
+2023-06-05 00:17:09.503 [INFO] Condition evaluation unchanged
+[2023-06-05 00:21:56.586] [INFO] Token retrieved successfully.
+[2023-06-05 00:21:56.597] [INFO] Token retrieved successfully.
+[2023-06-05 00:21:56.623] [INFO] Token retrieved successfully.
+[2023-06-05 00:23:57.014] [INFO] Token retrieved successfully.
+[2023-06-05 00:23:57.026] [INFO] Token retrieved successfully.
+[2023-06-05 00:23:57.060] [INFO] Token retrieved successfully.
+[2023-06-05 00:37:42.547] [INFO] Token retrieved successfully.
+[2023-06-05 00:37:42.555] [INFO] Token retrieved successfully.
+[2023-06-05 00:37:42.581] [INFO] Token retrieved successfully.
+2023-06-05 00:47:39.921 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 194034 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:47:39.921 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:47:40.040 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:47:40.040 [INFO] Starting service [Tomcat]
+2023-06-05 00:47:40.041 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:47:40.049 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:47:40.049 [INFO] Root WebApplicationContext: initialization completed in 126 ms
+2023-06-05 00:47:40.131 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:47:40.138 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:47:40.141 [INFO] Started VishwaasApplication in 0.239 seconds (process running for 342.377)
+2023-06-05 00:47:40.142 [INFO] Condition evaluation unchanged
+[2023-06-05 00:57:05.216] [INFO] Certificate API called successfully.
+2023-06-05 01:03:03.265 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 204727 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 01:03:03.267 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 01:03:03.613 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 01:03:03.614 [INFO] Starting service [Tomcat]
+2023-06-05 01:03:03.614 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 01:03:03.627 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 01:03:03.628 [INFO] Root WebApplicationContext: initialization completed in 355 ms
+2023-06-05 01:03:03.776 [INFO] LiveReload server is running on port 35729
+2023-06-05 01:03:03.807 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 01:03:03.810 [INFO] Started VishwaasApplication in 0.649 seconds (process running for 258.415)
+2023-06-05 01:03:03.821 [INFO] Condition evaluation unchanged
+2023-06-05 01:03:14.189 [INFO] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-06-05 01:03:14.192 [INFO] Stopping service [Tomcat]
+2023-06-05 01:03:14.263 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 204727 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 01:03:14.263 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 01:03:14.424 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 01:03:14.425 [INFO] Starting service [Tomcat]
+2023-06-05 01:03:14.425 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 01:03:14.432 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 01:03:14.432 [INFO] Root WebApplicationContext: initialization completed in 166 ms
+2023-06-05 01:03:14.511 [INFO] LiveReload server is running on port 35729
+2023-06-05 01:03:14.517 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 01:03:14.520 [INFO] Started VishwaasApplication in 0.283 seconds (process running for 269.124)
+2023-06-05 01:03:14.521 [INFO] Condition evaluation unchanged
+2023-06-05 01:03:31.934 [INFO] Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-06-05 01:03:31.936 [INFO] Stopping service [Tomcat]
+2023-06-05 01:03:32.011 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 204727 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 01:03:32.011 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 01:03:32.220 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 01:03:32.221 [INFO] Starting service [Tomcat]
+2023-06-05 01:03:32.221 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 01:03:32.229 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 01:03:32.229 [INFO] Root WebApplicationContext: initialization completed in 216 ms
+2023-06-05 01:03:32.304 [INFO] LiveReload server is running on port 35729
+2023-06-05 01:03:32.330 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 01:03:32.333 [INFO] Started VishwaasApplication in 0.35 seconds (process running for 286.938)
+2023-06-05 01:03:32.334 [INFO] Condition evaluation unchanged
+2023-06-05 01:03:33.709 [INFO] Restarting due to 13 class path changes (0 additions, 0 deletions, 13 modifications)
+2023-06-05 01:03:33.721 [INFO] Stopping service [Tomcat]
+2023-06-05 01:03:33.833 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 204727 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 01:03:33.834 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 01:03:34.039 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 01:03:34.040 [INFO] Starting service [Tomcat]
+2023-06-05 01:03:34.040 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 01:03:34.049 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 01:03:34.049 [INFO] Root WebApplicationContext: initialization completed in 213 ms
+2023-06-05 01:03:34.170 [INFO] LiveReload server is running on port 35729
+2023-06-05 01:03:34.181 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 01:03:34.184 [INFO] Started VishwaasApplication in 0.401 seconds (process running for 288.789)
+2023-06-05 01:03:34.186 [INFO] Condition evaluation unchanged

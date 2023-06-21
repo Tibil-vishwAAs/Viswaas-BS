@@ -1,0 +1,26 @@
+2023-06-05 00:34:42.329 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 182436 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:34:42.330 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:34:42.442 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:34:42.442 [INFO] Starting service [Tomcat]
+2023-06-05 00:34:42.443 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:34:42.448 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:34:42.448 [INFO] Root WebApplicationContext: initialization completed in 117 ms
+2023-06-05 00:34:42.510 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:34:42.522 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:34:42.524 [INFO] Started VishwaasApplication in 0.229 seconds (process running for 652.929)
+2023-06-05 00:34:42.525 [INFO] Condition evaluation unchanged
+2023-06-05 00:36:43.122 [INFO] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-06-05 00:36:43.128 [INFO] Stopping service [Tomcat]
+2023-06-05 00:47:21.019 [INFO] Starting VishwaasApplication using Java 17.0.5 with PID 194034 (/home/taher/Downloads/Vishwaas/target/classes started by taher in /home/taher/Downloads/Vishwaas)
+2023-06-05 00:47:21.025 [INFO] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 00:47:21.306 [INFO] Tomcat initialized with port(s): 8090 (http)
+2023-06-05 00:47:21.307 [INFO] Starting service [Tomcat]
+2023-06-05 00:47:21.308 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-05 00:47:21.326 [INFO] Initializing Spring embedded WebApplicationContext
+2023-06-05 00:47:21.326 [INFO] Root WebApplicationContext: initialization completed in 291 ms
+2023-06-05 00:47:21.400 [INFO] LiveReload server is running on port 35729
+2023-06-05 00:47:21.413 [INFO] Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-05 00:47:21.416 [INFO] Started VishwaasApplication in 0.868 seconds (process running for 323.651)
+2023-06-05 00:47:21.417 [INFO] Condition evaluation unchanged
+2023-06-05 00:47:39.836 [INFO] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-05 00:47:39.842 [INFO] Stopping service [Tomcat]
