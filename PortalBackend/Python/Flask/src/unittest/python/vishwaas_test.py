@@ -1,8 +1,7 @@
-from src.vishwaas import get_access_token, add_token_json
+from src.main.python.vishwaas import get_access_token, add_token_json
 import requests
 from configparser import ConfigParser
-from src.constant import request_body, osid
-
+from constant_test import request_body, osid
 
 config = ConfigParser()
 config.read('config.ini')

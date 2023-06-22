@@ -3,8 +3,9 @@ import requests
 import uuid
 import json
 from configparser import ConfigParser
-from src.constant import token_generate_header, header_json, certificate_exists_failure_response_code, \
-    token_failure_response_code, verification_failure_response_code, signedCredentials_key, osid_key, entity_exists_or_not_failure_response_code, name_key, entity_failure_response_code
+from constant import token_generate_header, header_json, certificate_exists_failure_response_code, \
+    token_failure_response_code, verification_failure_response_code, signedCredentials_key, osid_key, \
+    entity_exists_or_not_failure_response_code, name_key, entity_failure_response_code
 
 app = Flask(__name__)
 
@@ -117,14 +118,14 @@ def entity_exists_or_not(certificate_data, header):
                     matching_count += 1
             break
 
-    if (matching_count == len(entity_keys)):
+    if matching_count == len(entity_keys):
         response_code = certificate_exists_failure_response_code
         response = {
             "responseCode": response_code
         }
         return response
 
-    elif (matching_count>0):
+    elif matching_count > 0:
         response_code = entity_exists_or_not_failure_response_code
         response = {
             "responseCode": response_code
@@ -136,9 +137,6 @@ def entity_exists_or_not(certificate_data, header):
             "responseCode": response_code
         }
         return response
-
-
-
 
 
 def entity(key, value, header):
