@@ -1,6 +1,7 @@
-build.py
-setup.py
-requirements.txt
-pyproject.toml
-__init__.py
 __pycache__/
+.pytest_cache/
+.idea/
+venv/
+docs/
+target/
+.pybuilder/
