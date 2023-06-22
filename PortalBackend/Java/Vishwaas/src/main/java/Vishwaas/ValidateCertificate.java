@@ -48,9 +48,9 @@ public class ValidateCertificate {
     @Autowired
     private Create create;
 
-	private RestTemplate setRestTemplate;
+    private RestTemplate setRestTemplate;
 
-	private Create setCreateCertificate;
+    private Create setCreateCertificate;
    
 
     public ObjectNode checkCertificate(@RequestBody CertificateData certificateData) {
@@ -103,9 +103,9 @@ public class ValidateCertificate {
                 jsonObject.put("status", "Certificate  already exists");
                 return jsonObject;
             } else {
-               // jsonObject.put("status", "Certificate does not exist");
+               
                 ResponseEntity<String> createResponse = create.createCertificate(certificateData);
-               // System.out.println(createResponse.getBody());
+             
                
                 jsonObject = (ObjectNode) new ObjectMapper().readTree(createResponse.getBody());
                 
@@ -121,7 +121,7 @@ public class ValidateCertificate {
 
 
 	public void setRestTemplate(RestTemplate restTemplate) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
