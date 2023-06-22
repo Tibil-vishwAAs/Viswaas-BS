@@ -27,7 +27,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 @Component
 public class Verify 
 {
-	    @Value("${baseURL}")
+	 	@Value("${baseURL}")
 	    private String baseURL;
 
 	    @Value("${rc.port}")
@@ -66,16 +66,24 @@ public class Verify
 	        if (getResponse.getStatusCode() == HttpStatus.OK) {
 	            JsonNode jsonNode = objectMapper.readTree(responseBody);
 	            String signedData = jsonNode.get("_osSignedData").asText();
+	         //   System.out.println("_osSignedData :" + signedData);
+
 	            String unescapedString = StringEscapeUtils.unescapeJava(signedData);
+
 	            JsonNode signedCredentials = objectMapper.readTree(unescapedString);
+
 	            ObjectNode updatedJsonNode = objectMapper.createObjectNode();
 	            updatedJsonNode.set("signedCredentials", signedCredentials);
+
 	            String updatedResponseBody = objectMapper.writeValueAsString(updatedJsonNode);
+
 	            HttpHeaders postHeaders = new HttpHeaders();
 	            postHeaders.setContentType(MediaType.APPLICATION_JSON);
 	            postHeaders.setBearerAuth(tokenTest.getToken());
 	            postHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
 	            HttpEntity<String> postRequestEntity = new HttpEntity<>(updatedResponseBody, postHeaders);
+
 	            ResponseEntity<String> postResponse = restTemplate.exchange(
 	                    postUrl,
 	                    HttpMethod.POST,

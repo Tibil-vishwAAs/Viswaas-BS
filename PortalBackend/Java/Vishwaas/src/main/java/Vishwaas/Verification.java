@@ -25,7 +25,7 @@ public class Verification
 	@Autowired
 	private Token tokentest;
 	@Value("${verifyApiUrl}")
-    	private String verifyApiUrl;
+    private String verifyApiUrl;
 	@GetMapping(path="/api/v1/Verification/{osid}")
 	public ResponseEntity<String> verifyAPi(@PathVariable String osid) throws JsonMappingException, JsonProcessingException 
 	{ 
@@ -33,6 +33,10 @@ public class Verification
 	    restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.set("Authorization", "Bearer " + tokentest.getToken());
+
+	    
+	  
+
 	    return verify.verifyCertificate(osid);
 	}
 

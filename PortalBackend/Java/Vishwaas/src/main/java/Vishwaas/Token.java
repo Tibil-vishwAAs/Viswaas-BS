@@ -78,6 +78,7 @@ public class Token {
 		this.clientSecret = clientSecret;
 	}
 
+//	private RestTemplate restTemplate;
 
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
