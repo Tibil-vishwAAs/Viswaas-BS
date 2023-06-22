@@ -126,32 +126,6 @@ class Assessment():
                 cur.close()
                 conn.close()
 
-    """Feature function not in USE currently"""
-    def feature(self, featureId):
-        try:
-            conn = db.get_connection()
-            cur = conn.cursor()
-            conn.autocommit = True
-
-            # Execute query to select data from table
-            cur.execute(f'SELECT * FROM {cons.Constants.FEATURE_TABLE} where id={featureId}')
-            rows = cur.fetchall()
-            if rows is not None:
-                rows = cur.fetchall()
-                data = [{'featureId': row[0], 'description': row[1], 'rebitapistandardversion': row[2]} for row in rows]
-                # Close the cursor and the database connection
-                cur.close()
-
-                return data
-        except (Exception, psycopg2.Error) as error:
-            print(f"Failed to query record into {cons.Constants.FEATURE_TABLE} table", error)
-        finally:
-            # close the database connection
-            if conn:
-                cur.close()
-                conn.close()
-                print("PostgreSQL connection is closed")
-
     def scenario(self, featureId):
         try:
 
@@ -171,7 +145,6 @@ class Assessment():
                 return data
 
         except (Exception, psycopg2.Error) as error:
-            # print(f"Failed to query record into {cons.Constants.SCENARIO_TABLE} table", error)
             logger.error(f"Failed to query record into {cons.Constants.SCENARIO_TABLE} table")
             logger.error(error)
 

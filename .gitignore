@@ -1,1 +1,6 @@
-.idea/
+build.py
+setup.py
+requirements.txt
+pyproject.toml
+__init__.py
+__pycache__/

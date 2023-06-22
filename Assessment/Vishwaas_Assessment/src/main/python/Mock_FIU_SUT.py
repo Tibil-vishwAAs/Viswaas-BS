@@ -32,20 +32,7 @@ def consent_notification():
     url = "http://127.0.0.1:8082/consent/notification/response"
 
     data = request.get_json()
-    # payload = json.dumps({
-    #     "ver": "1.0",
-    #     "ConsentStatusNotification": {
-    #         "consentId": "XXXX0-XXXX-XXXX",
-    #         "consentHandle": "XXXX0-XXXX-XXXX",
-    #         "consentStatus": "PAUSED"
-    #     },
-    #     "timestamp": "2018-12-06T11:39:57.153Z",
-    #     "txnid": "0b811819-9044-4856-b0ee-8c88035f8858",
-    #     "Notifier": {
-    #         "id": "AA-1",
-    #         "type": "AA"
-    #     }
-    # })
+
     headers = {
         'Content-Type': 'application/json'
     }

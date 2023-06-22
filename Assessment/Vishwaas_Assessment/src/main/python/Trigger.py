@@ -39,9 +39,7 @@ class Trigger():
             port = ":5000"
             url = ipaddress + port + endpoint
             headers = {
-                # 'x-jws-signature': 'ewogICJhbGciOiAiUlMyNTYiLAogICJraWQiOiAiMTMzNzQ3MTQxMjU1IiwKICAiaWF0IjogMCwKICAiaXNzIjogIkM9R0IsIEw9TG9uZG9uLCBPVT1OdWFwYXkgQVBJLCBPPU51YXBheSwgQ049eWJvcXlheTkycSIsCiAgImI2NCI6IGZhbHNlLAogICJjcml0IjogWwogICAgImlhdCIsCiAgICAiaXNzIiwKICAgICJiNjQiCiAgXQp9..d_cZ46lwNiaFHAu_saC-Zz4rSzNbevWirO94EmBlbOwkB1L78vGbAnNjUsmFSU7t_HhL-cyMiQUDyRWswsEnlDljJsRi8s8ft48ipy2SMuZrjPpyYYMgink8nZZK7l-eFJcTiS9ZWezAAXF_IJFXSTO5ax9z6xty3zTNPNMV9W7aH8fEAvbUIiueOhH5xNHcsuqlOGygKdFz2rbjTGffoE_6zS4Dry-uX5mts2duLorobUimGsdlUcSM6P6vZEtcXaJCdjrT9tuFMh4CkX9nqk19Bq2z3i-SX4JCPvhD2r3ghRmX0gG08UcvyFVbrnVZJnpl4MU8V4Nr3-2M5URZOg',
                 'Content-Type': 'application/json',
-                # 'aa_api_key': ''
             }
 
             request_body = json.dumps({
@@ -57,7 +55,6 @@ class Trigger():
 
     def callback(self, stepConf):
         print("inside call back")
-                                # SUT                                       #Mock AA
         logger.info(f"Callback {stepConf['to']} /consent/notification from {stepConf['from']}")
         if stepConf['action'].lower() == 'callback':
             # ipaddress = sut[0]['ipaddress']
@@ -73,14 +70,12 @@ class Trigger():
                 'x-jws-signature': 'Duis et cillum velit',
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
-                # 'client_api_key': '{{apiKey}}'
             }
 
             request_body = json.dumps({
                 "ver": "1.0",
                 "timestamp": "2018-12-06T11:39:57.153Z"
             })
-            # print(url, headers, request_method, request_body)
 
             callback_res = Trigger.call_api(Trigger(), url, headers, request_method, body=request_body)
             return callback_res
