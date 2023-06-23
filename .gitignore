@@ -1,2 +1,7 @@
-vishwaas/.idea/
-vishwaas/.pytest_cache
+__pycache__/
+.pytest_cache/
+.idea/
+venv/
+docs/
+target/
+.pybuilder/
