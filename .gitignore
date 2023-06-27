@@ -3,7 +3,6 @@ __pycache__/
 .idea/
 venv/
 docs/
-target/
 .pybuilder/
 .PortalBackend/Java/target/generated-sources/
 .PortalBackend/Java/target/generated-test-sources/
