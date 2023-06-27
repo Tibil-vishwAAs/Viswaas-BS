@@ -20,6 +20,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
+import com.vishwaas.Token;
+
 @RunWith(MockitoJUnitRunner.class)
 public class TokenTest {
     @Mock
@@ -40,24 +42,15 @@ public class TokenTest {
         token.setClientSecret("clientSecret");
     }
 
-
     @Test
-    public void testGetToken_SuccessfulRequest_ReturnsAccessToken() {
-       
+    public void testGetToken_SuccessfulRequest_ReturnsAccessToken() {       
         String accessToken = "testAccessToken";
         String response = "{\"access_token\": \"" + accessToken + "\"}";
         ResponseEntity<String> mockResponse = new ResponseEntity<>(response, HttpStatus.OK);
         when(restTemplate.exchange(anyString(), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class)))
-                .thenReturn(mockResponse);
-      
-      
-     
-        String result = token.getToken();
-
-       
-        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));
-
-     
+                .thenReturn(mockResponse);     
+        String result = token.getToken();       
+        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));     
         assertEquals(accessToken, result);
     }
 
@@ -66,31 +59,19 @@ public class TokenTest {
      
         ResponseEntity<String> mockResponse = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         when(restTemplate.exchange(anyString(), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class)))
-                .thenReturn(mockResponse);
-       
-       
-        String result = token.getToken();
-
-       
-        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));
-
-      
+                .thenReturn(mockResponse);       
+        String result = token.getToken();       
+        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));      
         assertNull(result);
     }
 
     @Test
-    public void testGetToken_InvalidGrantType_ReturnsNull() {
-       
+    public void testGetToken_InvalidGrantType_ReturnsNull() {       
         ResponseEntity<String> mockResponse = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         when(restTemplate.exchange(anyString(), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class)))
-                .thenReturn(mockResponse);
-
-   
+                .thenReturn(mockResponse);   
         String result = token.getToken();
-
-        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));
-
-        
+        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));       
         assertNull(result);
     }
 
@@ -99,15 +80,9 @@ public class TokenTest {
   
         ResponseEntity<String> mockResponse = new ResponseEntity<>(HttpStatus.NOT_FOUND);
         when(restTemplate.exchange(anyString(), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class)))
-                .thenReturn(mockResponse);
-
-    
-        String result = token.getToken();
-
-      
-        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));
-
-     
+                .thenReturn(mockResponse);    
+        String result = token.getToken();      
+        verify(restTemplate).exchange(eq("http://keycloak:8080/auth/realms/sunbird-rc/protocol/openid-connect/token"), eq(HttpMethod.POST), any(HttpEntity.class), eq(String.class));    
         assertNull(result);
     }
 

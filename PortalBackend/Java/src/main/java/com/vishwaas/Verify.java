@@ -1,7 +1,8 @@
-package Vishwaas;
+package com.vishwaas;
 
 
 import java.util.Collections;
+import java.util.logging.Logger;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -27,6 +28,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 @Component
 public class Verify 
 {
+	//Parameter for RC verify certificate
 	 	@Value("${baseURL}")
 	    private String baseURL;
 
@@ -39,7 +41,9 @@ public class Verify
 	    private String verify;
 	    @Autowired
 	    private Token tokenTest;
-	    
+	    private static final Logger logger = Logger.getLogger(Verify.class.getName());
+
+	    //Verify certificate is called to verify the certificate
 	    public ResponseEntity<String> verifyCertificate(String osid) throws JsonMappingException, JsonProcessingException {
 
 	        String certificateUrl = baseURL + ":" + port + entity + "/" + osid;
@@ -66,7 +70,7 @@ public class Verify
 	        if (getResponse.getStatusCode() == HttpStatus.OK) {
 	            JsonNode jsonNode = objectMapper.readTree(responseBody);
 	            String signedData = jsonNode.get("_osSignedData").asText();
-	         //   System.out.println("_osSignedData :" + signedData);
+	     
 
 	            String unescapedString = StringEscapeUtils.unescapeJava(signedData);
 
@@ -94,14 +98,24 @@ public class Verify
 	            if (postResponse.getStatusCode() == HttpStatus.OK) {
 	                return new ResponseEntity<>(postResponse.getBody(), HttpStatus.OK);
 	            } else {
-	                System.out.println("Failed to create certificate. Status code: " + postResponse.getStatusCode());
+	                logger.severe("Failed to create certificate. Status code: " + postResponse.getStatusCode());
 	                return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	            }
 	        } else if (getResponse.getStatusCode() == HttpStatus.NOT_FOUND) {
-	            System.out.println("Failed to retrieve certificate. Status code: " + getResponse.getStatusCode());
+	            logger.warning("Failed to retrieve certificate. Status code: " + getResponse.getStatusCode());
 	        }
 
 	        return new ResponseEntity<>(responseBody, getResponse.getStatusCode());
 	    }
+
+		public ResponseEntity<String> verifyAPi(CertificateData certificatedata, String osid) {
+			
+			return null;
+		}
+
+		public ResponseEntity<String> verifyAPi(String osid) {
+			
+			return null;
+		}
 
 }

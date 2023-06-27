@@ -1,10 +1,12 @@
-package Vishwaas;
+package com.vishwaas;
 
 import org.springframework.stereotype.Component;
 
+//CertificateData to store the certificate Details
 @Component
 public class CertificateData {
 	
+	//Variables for certificate
 	private String name;
 	    private String entitytype;
 	    private String rebitversion;

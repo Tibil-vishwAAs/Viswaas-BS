@@ -1,4 +1,4 @@
-package Vishwaas;
+package com.vishwaas;
 
 
 
@@ -21,6 +21,7 @@ import org.springframework.web.util.UriUtils;
 @Component
 @ComponentScan(basePackages = "com.example.Vishwaas")
 public class Token {
+	//Parameter to generate token
     @Value("${keycloak.baseurl}")
     private String keycloakUrl;
 
@@ -78,12 +79,13 @@ public class Token {
 		this.clientSecret = clientSecret;
 	}
 
-//	private RestTemplate restTemplate;
-
+	
+	    
+	   
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
-
+    //Token is generated
     public String getToken() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);

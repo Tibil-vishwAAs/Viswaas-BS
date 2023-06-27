@@ -3,6 +3,10 @@ __pycache__/
 .idea/
 venv/
 docs/
-target/
 .pybuilder/
-.PortalBackend/Java/target/
+.PortalBackend/Java/target/generated-sources/
+.PortalBackend/Java/target/generated-test-sources/
+.PortalBackend/Java/target/maven-archiver/
+.PortalBackend/Java/target/maven-status/
+.PortalBackend/Java/target/surefire-reports/
+
