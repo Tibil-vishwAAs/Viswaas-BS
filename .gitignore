@@ -9,4 +9,4 @@ docs/
 .PortalBackend/Java/target/maven-archiver/
 .PortalBackend/Java/target/maven-status/
 .PortalBackend/Java/target/surefire-reports/
-
+.LICENSE
