@@ -1,12 +1,5 @@
-__pycache__/
-.pytest_cache/
-.idea/
-venv/
-docs/
-.pybuilder/
-.PortalBackend/Java/target/generated-sources/
-.PortalBackend/Java/target/generated-test-sources/
-.PortalBackend/Java/target/maven-archiver/
-.PortalBackend/Java/target/maven-status/
-.PortalBackend/Java/target/surefire-reports/
+..idea/
+.PortalBackend/Java/target/
+..github/
+.LICENSE
 
