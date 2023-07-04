@@ -38,6 +38,8 @@ public class Certificates {
 
     @Autowired
     private CertificateData certificateData;
+    
+  
 
     //Certificate API is called 
     @PostMapping(path = "/api/v1/Certificates", consumes = "application/json")
@@ -45,8 +47,10 @@ public class Certificates {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer " + token.getToken());      
+        headers.set("Authorization", "Bearer " + token.getToken());    
+
         return certificate.checkCertificate(certificateData);
+        
     }	
 }
 
