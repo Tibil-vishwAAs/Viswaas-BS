@@ -31,6 +31,9 @@ public class ValidateCertificate {
 
     @Autowired
     private Create create;
+    
+    @Autowired
+    private CertificateData certificateData;
 
 	//checkCertificate API is called to validate the certificate existance
     public ObjectNode checkCertificate(@RequestBody CertificateData certificateData) {
