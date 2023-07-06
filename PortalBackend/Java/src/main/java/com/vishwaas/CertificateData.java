@@ -1,10 +1,7 @@
 package com.vishwaas;
 
 import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,9 +10,8 @@ import jakarta.persistence.Table;
 
 @Component
 @Entity
-@Table(name = "Certificates")
+@Table(name = "certificates")
 public class CertificateData {
-
 	
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,11 +31,9 @@ public class CertificateData {
     
  
 
-public void setId(int id) {
-	this.id = id;
-}
-
-
+    public void setId(int id) {
+    	this.id = id;
+    }
    
     public void setCertificateId(String osid) {
         this.certificateId = osid;
@@ -99,21 +93,15 @@ public void setId(int id) {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
-    }
-
-   
+    }  
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
 
-   
-
     public void setCreatedBy(String keycloakClientId) {
         this.createdBy = keycloakClientId;
     }
-
-   
 
     public void setUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
@@ -132,7 +120,5 @@ public void setId(int id) {
 				+ ", rebitversion=" + rebitversion + ", purposecode=" + purposecode + ", fitype=" + fitype
 				+ ", expired=" + expired + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", createdBy="
 				+ createdBy + ", updatedBy=" + updatedBy + ", id=" + id + "]";
-	}
-
-  
+	}  
 }

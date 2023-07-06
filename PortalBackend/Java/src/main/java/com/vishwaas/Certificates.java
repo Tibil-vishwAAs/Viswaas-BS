@@ -39,8 +39,6 @@ public class Certificates {
     @Autowired
     private CertificateData certificateData;
     
-  
-
     //Certificate API is called 
     @PostMapping(path = "/api/v1/Certificates", consumes = "application/json")
     public ObjectNode certificateAPI(@RequestBody CertificateData certificateData) {		
@@ -49,8 +47,7 @@ public class Certificates {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + token.getToken());    
 
-        return certificate.checkCertificate(certificateData);
-        
+        return certificate.checkCertificate(certificateData);      
     }	
 }
 

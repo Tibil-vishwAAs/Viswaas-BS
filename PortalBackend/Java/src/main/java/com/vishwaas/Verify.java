@@ -19,7 +19,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -38,16 +37,16 @@ public class Verify
 	    @Value("${rc.Entity}")
 	    private String entity;
 	    @Value("${rc.Verify}")
-	    private String verify;
+	    private String ver;
 	    @Autowired
 	    private Token tokenTest;
 	    private static final Logger logger = Logger.getLogger(Verify.class.getName());
 
 	    //Verify certificate is called to verify the certificate
-	    public ResponseEntity<String> verifyCertificate(String osid) throws JsonMappingException, JsonProcessingException {
+	    public ResponseEntity<String> verifyCertificate(String osid) throws  JsonProcessingException {
 
 	        String certificateUrl = baseURL + ":" + port + entity + "/" + osid;
-	        String postUrl = baseURL + ":" + port + verify;
+	        String postUrl = baseURL + ":" + port + ver;
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setContentType(MediaType.APPLICATION_JSON);
 	        headers.setBearerAuth(tokenTest.getToken());
@@ -108,14 +107,8 @@ public class Verify
 	        return new ResponseEntity<>(responseBody, getResponse.getStatusCode());
 	    }
 
-		public ResponseEntity<String> verifyAPi(CertificateData certificatedata, String osid) {
-			
-			return null;
-		}
+		
 
-		public ResponseEntity<String> verifyAPi(String osid) {
-			
-			return null;
-		}
+		
 
 }
