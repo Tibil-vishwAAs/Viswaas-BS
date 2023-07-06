@@ -1,7 +1,6 @@
 package com.vishwaas;
 
 import java.util.Collections;
-import java.util.UUID;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,15 +42,11 @@ public class Create {
    
     @Autowired
     private CertificateData certificateData;
-    
-//    @Autowired
-//    private CertificateEntity certificateEntity;
-//    
+       
     private static final Logger logger = Logger.getLogger(Create.class.getName());
 
    //Create certificate API has been Called 
     public ResponseEntity<String> createCertificate(@RequestBody CertificateData certificatedata) {
-    System.out.println(certificatedata);
         try {
             String certificateUrl = baseURL + ":" + port + entity;
             HttpHeaders headers = new HttpHeaders();
@@ -72,14 +67,9 @@ public class Create {
             	ObjectMapper objectMapper = new ObjectMapper();
                 JsonNode responseJson = objectMapper.readTree(response.getBody());
                 JsonNode osidNode = responseJson.get("result").get("Vishwaastest").get("osid");
-                String osid = osidNode.asText();
-System.out.println(osid);
-                // Set the osid value in the certificateData object
-				
-certificatedata.setCertificateId(osid);
-certificatedata.setCreatedBy(keycloakClientId);
-
-            	
+                String osid = osidNode.asText();				
+                certificatedata.setCertificateId(osid);
+                certificatedata.setCreatedBy(keycloakClientId);
                 certificatesrepo.save(certificatedata);
                 return new ResponseEntity<String>(response.getBody(), HttpStatus.OK);              
             } else if (response.getStatusCode() == HttpStatus.NOT_FOUND) {

@@ -38,7 +38,7 @@ public class VerificationTest {
 
    
     @Test
-    public void testVerifyAPi_Success() throws JsonProcessingException {
+     void testVerifyAPi_Success() throws JsonProcessingException {
         String osid = "12345";
         String expectedResponse = "Success";
         Mockito.when(verify.verifyCertificate(eq(osid))).thenReturn(ResponseEntity.ok(expectedResponse));
@@ -50,7 +50,7 @@ public class VerificationTest {
     }
 
     @Test
-    public void testVerifyAPi_IdNotPassed() throws JsonProcessingException {
+     void testVerifyAPi_IdNotPassed() throws JsonProcessingException {
         String osid = null;
         Mockito.when(verify.verifyCertificate(eq(osid))).thenReturn(ResponseEntity.notFound().build());
 
@@ -60,7 +60,7 @@ public class VerificationTest {
     }
 
     @Test
-    public void testVerifyAPi_InvalidToken() throws JsonProcessingException {
+     void testVerifyAPi_InvalidToken() throws JsonProcessingException {
         String osid = "12345";
         Mockito.when(verify.verifyCertificate(eq(osid))).thenReturn(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 
