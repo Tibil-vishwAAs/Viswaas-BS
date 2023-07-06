@@ -39,7 +39,7 @@ public class Create {
     private Token tokenTest;
     
     @Autowired
-    private CertificatesData certificatesrepo;
+    private CertificateRepository certificatesrepo;
    
     @Autowired
     private CertificateData certificateData;
