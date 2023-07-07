@@ -82,7 +82,7 @@ public class ValidateCertificate {
      }
             	} catch (Exception e) {
             ResponseEntity<String> createResponse = create.createCertificate(certificateData);
-          e.printStackTrace();
+
         }
 		return jsonObject;
     }
