@@ -34,7 +34,7 @@ jobs:
       run: mvn -B test -Dspring.profiles.active=test --file pom.xml
       working-directory: ./PortalBackend/Java
 
-    - name: Build and test docker image
+    - name: Build and push docker image
       uses: docker/build-push-action@v2
       with:
         context: PortalBackend/Java
