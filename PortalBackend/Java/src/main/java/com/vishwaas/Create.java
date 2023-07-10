@@ -71,7 +71,7 @@ public class Create {
                 certificatedata.setCertificateId(osid);
                 certificatedata.setCreatedBy(keycloakClientId);
                 certificatesrepo.save(certificatedata);
-                return new ResponseEntity<String>(response.getBody(), HttpStatus.OK);              
+                return new ResponseEntity<>(response.getBody(), HttpStatus.OK);              
             } else if (response.getStatusCode() == HttpStatus.NOT_FOUND) {
                 logger.severe("Failed to create certificate. Status code: " + response.getStatusCode());
             }
