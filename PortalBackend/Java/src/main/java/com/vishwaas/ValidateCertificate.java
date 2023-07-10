@@ -85,8 +85,10 @@ public class ValidateCertificate {
               jsonObject = (ObjectNode) new ObjectMapper().readTree(createResponse.getBody());
      }
             	} catch (Exception e) {
+
             		logger.severe("error removed");
-            		
+
+
         }
 		return jsonObject;
     }
