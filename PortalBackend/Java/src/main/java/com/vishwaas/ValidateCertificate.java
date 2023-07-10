@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
+import java.util.logging.Logger;
+
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,6 +36,8 @@ public class ValidateCertificate {
     
     @Autowired
     private CertificateData certificateData;
+    private static final Logger logger = Logger.getLogger(ValidateCertificate.class.getName());
+
 
 	//checkCertificate API is called to validate the certificate existance
     public ObjectNode checkCertificate(@RequestBody CertificateData certificateData) {
@@ -60,17 +64,17 @@ public class ValidateCertificate {
                 for (JsonNode certificateJson : responseJson) {
                     if (certificateJson.has("name") && certificateJson.has("entitytype") &&
                             certificateJson.has("rebitversion") && certificateJson.has("purposecode") &&
-                            certificateJson.has("fitype") && certificateJson.has("expired")) {
-                        if (certificateJson.get("name").asText().equals(certificateData.getName()) &&
-                                certificateJson.get("entitytype").asText().equals(certificateData.getEntitytype()) &&
-                                certificateJson.get("rebitversion").asText().equals(certificateData.getRebitversion()) &&
-                                certificateJson.get("purposecode").asInt() == certificateData.getPurposecode() &&
-                                certificateJson.get("fitype").asText().equals(certificateData.getFitype()) &&
-                                certificateJson.get("expired").asText().equals(certificateData.getExpired())) {
-                            certificateExists = true;
-                            break;
-                        }
+                            certificateJson.has("fitype") && certificateJson.has("expired") &&
+                            certificateJson.get("name").asText().equals(certificateData.getName()) &&
+                            certificateJson.get("entitytype").asText().equals(certificateData.getEntitytype()) &&
+                            certificateJson.get("rebitversion").asText().equals(certificateData.getRebitversion()) &&
+                            certificateJson.get("purposecode").asInt() == certificateData.getPurposecode() &&
+                            certificateJson.get("fitype").asText().equals(certificateData.getFitype()) &&
+                            certificateJson.get("expired").asText().equals(certificateData.getExpired())) {
+                        certificateExists = true;
+                        break;
                     }
+                
                 }
             }
             	if (certificateExists) {
@@ -81,8 +85,8 @@ public class ValidateCertificate {
               jsonObject = (ObjectNode) new ObjectMapper().readTree(createResponse.getBody());
      }
             	} catch (Exception e) {
-            ResponseEntity<String> createResponse = create.createCertificate(certificateData);
-          e.printStackTrace();
+            		logger.severe("error removed");
+            		
         }
 		return jsonObject;
     }

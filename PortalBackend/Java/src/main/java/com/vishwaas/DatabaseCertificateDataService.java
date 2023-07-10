@@ -26,7 +26,14 @@ public class DatabaseCertificateDataService implements Service{
 	        if (response.getStatusCode().is2xxSuccessful()) {
 	            return response.getBody();
 	        } else {
-	            throw new RuntimeException("Failed to fetch certificate data from the API");
+	            throw new CertificateDataFetchException("Failed to fetch certificate data from the API");
 	        }
 	    }
-}
+	  public static class CertificateDataFetchException extends RuntimeException {
+	        public CertificateDataFetchException(String message) {
+	            super(message);
+	        }
+	    }
+	}
+
+
