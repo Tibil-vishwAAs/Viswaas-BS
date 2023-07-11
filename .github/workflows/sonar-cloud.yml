@@ -5,10 +5,11 @@ on:
       - main
       - dev
   pull_request:
-    types: [opened]
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
+    name: Build and analyze
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,6 +21,7 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin' # Alternative distribution options are available.
+          overwrite-settings: false
 
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
