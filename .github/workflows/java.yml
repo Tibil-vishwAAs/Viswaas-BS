@@ -25,11 +25,11 @@ jobs:
 
       - name: Build with Maven # also packages the application
         run: mvn -B package -DskipTests --file pom.xml
-        working-directory: ./PortalBackend/Java
+        working-directory: ./PortalBackend/Demo
 
       - name: Run Tests with Maven # also packages the application
         run: mvn -B test -Dspring.profiles.active=test --file pom.xml
-        working-directory: ./PortalBackend/Java
+        working-directory: ./PortalBackend/Demo
 
       - name: Build and push docker image
         uses: docker/build-push-action@v2
@@ -53,7 +53,7 @@ jobs:
           docker pull krishnarj/demo:latest
           docker image tag krishnarj/demo:latest  vishwassregistry.azurecr.io/java_test:v1
           docker push vishwassregistry.azurecr.io/java_test:v1
-        working-directory: ./PortalBackend/Java
+        working-directory: ./PortalBackend/Demo
 
       - name: Set the context for AKS
         uses: azure/aks-set-context@v1
