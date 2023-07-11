@@ -8,7 +8,7 @@ on:
       - dev
 
 jobs:
-  build and test:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,10 +26,10 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - name: unit test with maven
-      run: mvn test
-      working-directory: ./PortalBackend/Java
+    - name: Build with Maven # also packages the application
+      run: mvn -B package -DskipTests --file pom.xml
+      working-directory: ./PortalBackend/Demo
 
-    - name: Build with Maven
-      run: mvn clean install
-      working-directory: ./PortalBackend/Java
+    - name: Run Tests with Maven # also packages the application
+      run: mvn -B test -Dspring.profiles.active=test --file pom.xml
+      working-directory: ./PortalBackend/Demo
