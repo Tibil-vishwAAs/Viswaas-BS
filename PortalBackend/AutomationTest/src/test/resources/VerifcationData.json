@@ -1,0 +1,22 @@
+{
+  "signedCredentials": {
+    "@context": [
+      "string",
+      "string"
+    ],
+    "skillCertificate": {
+      "@id": "string",
+      "@context": {
+        "@version": 0,
+        "@protected": true,
+        "id": {},
+        "type": "string",
+        "name": "string",
+        "description": "string",
+        "issuer": {},
+        "issuanceDate": "string",
+        "credentialSubject": {}
+      }
+    }
+  }
+}
