@@ -1,0 +1,1 @@
+# Python code to connect with azure account
