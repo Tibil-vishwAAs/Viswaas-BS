@@ -1,4 +1,5 @@
 .pybuilder/
 target/
 pyproject.toml
-setup.py
+__pycache_/
+.idea/_
