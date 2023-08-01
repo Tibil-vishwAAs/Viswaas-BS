@@ -2,5 +2,5 @@
 target/
 pyproject.toml
 __pycache_/
-.idea/_
+.idea/
 
