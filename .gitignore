@@ -3,4 +3,5 @@ target/
 pyproject.toml
 __pycache_/
 .idea/
+build.py
 
